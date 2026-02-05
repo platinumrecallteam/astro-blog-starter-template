@@ -307,7 +307,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         .states-list {
           columns: 1;
         }
-      }
+     .oem-logos img {
+  max-height: 38px;
+  max-width: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) contrast(1.05);
+  opacity: 0.8;
+  margin: 0 auto;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.oem-logos img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+ }
     </style>
   </body>
 </html>
