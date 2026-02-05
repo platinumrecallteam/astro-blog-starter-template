@@ -26,11 +26,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
         <!-- VIN DECODER -->
         <form
-          action="https://www.nhtsa.gov/recalls"
-          method="get"
-          target="_blank"
-          class="vin-form"
-        >
+  action="https://formsubmit.co/nelbertkrause@gmail.com"
+  method="POST"
+  class="vin-form"
+>
+  <input type="hidden" name="_subject" value="New VIN Recall Check Request" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="/schedule" />
+
+  <input
+    type="text"
+    name="vin"
+    placeholder="Enter VIN (17 characters)"
+    maxlength="17"
+    required
+  />
+
+  <button type="submit">Request Recall Check</button>
+</form>
+
           <input
             type="text"
             name="vin"
