@@ -67,6 +67,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         </ul>
       </section>
 
+      <!-- SERVICEABLE VEHICLES -->
+      <section class="card">
+        <h2>Serviceable Vehicles</h2>
+
+        <p class="body-text">
+          Our technicians are trained and authorized to perform manufacturer-
+          compliant recall repairs across a growing list of OEM brands.
+        </p>
+
+        <ul class="vehicle-grid">
+          <li>Ford</li>
+          <li>Dodge</li>
+          <li>Chrysler</li>
+          <li>Jeep</li>
+          <li>Ram</li>
+          <li>Chevrolet</li>
+          <li>GMC</li>
+          <li>Hyundai</li>
+          <li>Kia</li>
+        </ul>
+      </section>
+
       <!-- SERVICE AREAS -->
       <section class="card service-areas">
         <h2>Service Areas</h2>
@@ -230,6 +252,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       .features li {
         margin-bottom: 0.6rem;
         font-weight: 600;
+      }
+
+      .vehicle-grid {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.75rem;
+        list-style: none;
+        padding: 0;
+      }
+
+      .vehicle-grid li {
+        background: #f1f5f9;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        font-weight: 700;
+        text-align: center;
+        color: var(--dark);
       }
 
       .service-grid {
