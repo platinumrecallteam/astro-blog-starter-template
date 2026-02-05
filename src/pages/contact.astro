@@ -29,8 +29,24 @@ import { SITE_TITLE } from '../consts';
           method="POST"
           class="contact-form"
         >
-          <input type="hidden" name="_subject" value="New Contact Request" />
+          <!-- FORM CONFIG -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Dealer / Fleet Inquiry"
+          />
           <input type="hidden" name="_captcha" value="false" />
+
+          <!-- ROUTING DROPDOWN -->
+          <div class="field">
+            <label>Inquiry Type</label>
+            <select name="Inquiry Type" required>
+              <option value="">Select one</option>
+              <option value="Dealer Inquiry">Dealer Inquiry</option>
+              <option value="Fleet Inquiry">Fleet Inquiry</option>
+              <option value="Commercial / Other">Commercial / Other</option>
+            </select>
+          </div>
 
           <div class="field">
             <label>Name</label>
@@ -59,6 +75,7 @@ import { SITE_TITLE } from '../consts';
 
     <Footer />
 
+    <!-- STYLES -->
     <style>
       .page {
         max-width: 800px;
@@ -70,11 +87,13 @@ import { SITE_TITLE } from '../consts';
         font-size: 2.2rem;
         font-weight: 800;
         margin-bottom: 0.75rem;
+        color: #020617;
       }
 
       .subtitle {
         color: #475569;
         margin-bottom: 2rem;
+        font-size: 1.05rem;
       }
 
       .card {
@@ -97,14 +116,21 @@ import { SITE_TITLE } from '../consts';
       label {
         font-weight: 600;
         margin-bottom: 0.4rem;
+        color: #020617;
       }
 
       input,
-      textarea {
+      textarea,
+      select {
         padding: 0.75rem;
         border-radius: 8px;
         border: 1px solid #cbd5e1;
         font-size: 1rem;
+        background: white;
+      }
+
+      select {
+        cursor: pointer;
       }
 
       button {
@@ -115,6 +141,7 @@ import { SITE_TITLE } from '../consts';
         border: none;
         border-radius: 10px;
         font-weight: 700;
+        letter-spacing: 0.04em;
         cursor: pointer;
       }
     </style>
