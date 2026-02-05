@@ -24,6 +24,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           mobile technicians — <strong>at no cost to the customer</strong>.
         </p>
 
+        <!-- VIN DECODER -->
         <form
           action="https://www.nhtsa.gov/recalls"
           method="get"
@@ -40,7 +41,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           <button type="submit">Check VIN for Recalls</button>
         </form>
 
-        <a href="/schedule" class="cta">Schedule Free Recall Service</a>
+        <a href="/schedule" class="cta">
+          Schedule Free Recall Service
+        </a>
       </section>
 
       <!-- WHAT WE DO -->
@@ -74,11 +77,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         </p>
 
         <div class="oem-logos">
-          <div class="logo-tile"><img src="/logos/ford.png" alt="Ford" /></div>
-          <div class="logo-tile"><img src="/logos/mopar.png" alt="Mopar" /></div>
-          <div class="logo-tile"><img src="/logos/gm.png" alt="GM" /></div>
-          <div class="logo-tile"><img src="/logos/hyundai.png" alt="Hyundai" /></div>
-          <div class="logo-tile"><img src="/logos/kia.png" alt="Kia" /></div>
+          <img src="/logos/ford.png" alt="Ford" />
+          <img src="/logos/mopar.png" alt="Mopar" />
+          <img src="/logos/gm.png" alt="General Motors" />
+          <img src="/logos/hyundai.png" alt="Hyundai" />
+          <img src="/logos/kia.png" alt="Kia" />
         </div>
       </section>
 
@@ -109,9 +112,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             </ul>
           </div>
 
+          <!-- ✅ YOUR MAP PNG -->
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/3/32/Blank_US_Map_%28states_only%29.svg"
-            alt="United States service area map"
+            src="/logos/map.png"
+            alt="Platinum Recall Team service area map"
             class="us-map"
           />
         </div>
@@ -120,9 +124,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
     <Footer />
 
+    <!-- STYLES -->
     <style>
       :root {
         --blue: #0ea5e9;
+        --blue-dark: #0284c7;
         --dark: #020617;
         --gray-dark: #1f2937;
         --gray: #475569;
@@ -133,7 +139,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       body {
         background: var(--bg);
         color: var(--gray-dark);
-        font-family: Inter, system-ui, sans-serif;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         line-height: 1.65;
       }
 
@@ -146,6 +153,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       h1 {
         font-size: clamp(2.4rem, 4vw, 3.2rem);
         font-weight: 800;
+        letter-spacing: -0.03em;
         color: var(--dark);
       }
 
@@ -153,6 +161,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         font-size: 1.85rem;
         font-weight: 750;
         color: var(--dark);
+      }
+
+      .subtitle {
+        max-width: 760px;
+        margin: 1rem auto 2rem;
+        font-size: 1.15rem;
+        color: #334155;
+      }
+
+      .body-text {
+        max-width: 760px;
+        font-size: 1.05rem;
       }
 
       .card {
@@ -176,14 +196,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
       .vin-form input {
         padding: 0.85rem;
-        min-width: 260px;
+        min-width: 280px;
         border-radius: 10px;
         border: 1px solid #cbd5e1;
       }
 
       .vin-form button {
         padding: 0.85rem 1.5rem;
-        background: #0ea5e9;
+        background: linear-gradient(135deg, #0ea5e9, #0284c7);
         color: white;
         border-radius: 10px;
         border: none;
@@ -194,36 +214,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         display: inline-block;
         margin-top: 1.25rem;
         padding: 1rem 2rem;
-        background: #020617;
+        background: linear-gradient(135deg, #020617, #0f172a);
         color: white;
         border-radius: 12px;
         font-weight: 800;
         text-decoration: none;
       }
 
-      /* OEM LOGOS – PERFECT SIZE + ROW */
       .oem-logos {
         display: flex;
         justify-content: center;
         gap: 2.5rem;
-        margin-top: 2rem;
         flex-wrap: wrap;
+        margin-top: 2rem;
       }
 
-      .logo-tile {
-        width: 120px;
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .logo-tile img {
-        max-width: 100%;
-        max-height: 100%;
+      .oem-logos img {
+        height: 80px;
+        width: auto;
         object-fit: contain;
-        filter: grayscale(100%);
-        opacity: 0.85;
       }
 
       .service-grid {
@@ -235,18 +244,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
       .states-list {
         columns: 2;
+        margin-top: 1rem;
       }
 
       .us-map {
-        max-width: 420px;
         width: 100%;
+        max-width: 480px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 14px;
+        box-shadow: 0 18px 40px rgba(2, 6, 23, 0.18);
       }
 
       @media (max-width: 768px) {
         .service-grid {
           grid-template-columns: 1fr;
         }
-
         .states-list {
           columns: 1;
         }
@@ -254,4 +268,3 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     </style>
   </body>
 </html>
-
