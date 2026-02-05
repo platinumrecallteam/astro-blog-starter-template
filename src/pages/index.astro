@@ -15,13 +15,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <Header />
 
     <main class="page">
-      <!-- HERO / PRIMARY ACTION -->
-      <section class="card hero">
-        <h1>Multi-State Mobile Automotive Recall Services for Dealerships & Fleets</h1>
+      <!-- HERO -->
+      <section class="hero card">
+        <h1>
+          Mobile Automotive Recall Services<br />
+          Built for Dealerships & Fleets
+        </h1>
 
         <p class="subtitle">
-          Manufacturer-compliant recall repairs performed on-site by certified
-          mobile technicians — <strong>at no cost to the customer</strong>.
+          Certified technicians. Manufacturer-compliant repairs.
+          <strong>No cost. No downtime.</strong>
         </p>
 
         <!-- VIN DECODER -->
@@ -34,25 +37,145 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           <input
             type="text"
             name="vin"
-            placeholder="Enter VIN (17 characters)"
+            placeholder="Enter 17-character VIN"
             maxlength="17"
             required
           />
-          <button type="submit">Check VIN for Recalls</button>
+          <button type="submit">Check VIN</button>
         </form>
 
         <p class="vin-note">
-          If open recalls are found, schedule service below.
+          Found an open recall? Schedule service instantly.
         </p>
 
-        <!-- SCHEDULE CTA -->
         <a href="/schedule" class="cta">
           Schedule Free Recall Service
         </a>
       </section>
 
-      <!-- WHAT WE DO -->
+      <!-- INFO -->
       <section class="card">
-        <h2>What We Do</h2>
-
+        <h2>How It Works</h2>
         <p>
+          We perform OEM-approved recall repairs directly at the vehicle’s
+          location. Our mobile teams handle scheduling, compliance, and
+          documentation — so your operation stays moving.
+        </p>
+
+        <ul class="features">
+          <li>✔ Manufacturer-compliant recall repairs</li>
+          <li>✔ Mobile service at your location</li>
+          <li>✔ Zero cost to vehicle owners</li>
+          <li>✔ Increased recall completion rates</li>
+        </ul>
+      </section>
+    </main>
+
+    <Footer />
+
+    <style>
+      :root {
+        --blue: #3b82f6;
+        --dark: #0f172a;
+        --gray: #e5e7eb;
+        --light: #f8fafc;
+      }
+
+      body {
+        background: linear-gradient(180deg, #f8fafc, #eef2f7);
+        color: var(--dark);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 14px;
+        padding: 2.5rem;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+      }
+
+      .hero {
+        text-align: center;
+        border-top: 6px solid var(--blue);
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        color: #475569;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .vin-form {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .vin-form input {
+        padding: 0.85rem 1rem;
+        border-radius: 8px;
+        border: 1px solid var(--gray);
+        width: 260px;
+        font-size: 1rem;
+      }
+
+      .vin-form button {
+        padding: 0.85rem 1.4rem;
+        border-radius: 8px;
+        border: none;
+        background: var(--blue);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .vin-note {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta {
+        display: inline-block;
+        padding: 0.95rem 1.8rem;
+        background: var(--dark);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .features {
+        margin-top: 1rem;
+        padding-left: 1.2rem;
+        color: #334155;
+      }
+
+      .features li {
+        margin-bottom: 0.6rem;
+      }
+    </style>
+  </body>
+</html>
