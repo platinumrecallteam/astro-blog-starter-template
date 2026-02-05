@@ -1,35 +1,142 @@
 ---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
 ---
-<h1>Schedule a Recall Appointment</h1>
 
-<p>
-Platinum Recall Team provides mobile automotive recall services at no cost
-to dealerships, fleets, or vehicle owners.
-</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Schedule Service | ${SITE_TITLE}`} />
+  </head>
 
-<p>
-Use the form below to request service and our team will confirm your
-appointment.
-</p>
+  <body>
+    <Header />
 
-<p>
-<strong>All recall work is performed free of charge.</strong>
-</p>
+    <main class="page">
+      <section class="card">
+        <h1>Schedule a Recall Appointment</h1>
 
-<p>
-<strong>Service Area:</strong> Texas, Arkansas, Oklahoma, Louisiana, Tennessee, Kentucky,
-Missouri, Illinois, Florida, Wisconsin, Indiana
-</p>
+        <p class="subtitle">
+          Platinum Recall Team provides mobile, OEM-compliant automotive recall
+          services at <strong>no cost</strong> to dealerships, fleets, or vehicle
+          owners.
+        </p>
 
-<p>
-<section style="width:100vw; margin-left:calc(-50vw + 50%);">
-  <div style="max-width:900px; margin:0 auto; padding:1rem;">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSc52GcK3drkkv27v-3Fs2fS_hRWggdOzPADyS7xV1ryB8Oaug/viewform?embedded=true"
-      style="width:100%; height:1500px; border:none;"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
+        <ul class="highlights">
+          <li>✔ All recall work performed free of charge</li>
+          <li>✔ Certified mobile technicians</li>
+          <li>✔ Manufacturer-compliant recall repairs</li>
+          <li>
+            ✔ Service coverage across TX, AR, OK, LA, TN, KY, MO, IL, FL, WI, IN
+          </li>
+        </ul>
+      </section>
 
-</p>
+      <!-- SCHEDULING FORM -->
+      <section class="card form-card">
+        <h2>Request Service</h2>
+
+        <p class="body-text">
+          Complete the form below to request mobile recall service. Our team will
+          review your submission and confirm scheduling details.
+        </p>
+
+        <div class="form-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc52GcK3drkkv27v-3Fs2fS_hRWggdOzPADyS7xV1ryB8Oaug/viewform?embedded=true"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+
+    <!-- STYLES -->
+    <style>
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: #020617;
+        margin-bottom: 0.75rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 750;
+        margin-bottom: 0.75rem;
+        color: #020617;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        color: #334155;
+        max-width: 760px;
+        margin-bottom: 1.5rem;
+      }
+
+      .body-text {
+        color: #1f2937;
+        max-width: 760px;
+        margin-bottom: 1.5rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 18px;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        border: 1px solid #e5e7eb;
+        box-shadow:
+          0 20px 45px rgba(15, 23, 42, 0.08),
+          0 2px 8px rgba(15, 23, 42, 0.04);
+      }
+
+      .highlights {
+        margin-top: 1rem;
+        padding-left: 1.25rem;
+      }
+
+      .highlights li {
+        margin-bottom: 0.6rem;
+        font-weight: 600;
+        color: #020617;
+      }
+
+      .form-card {
+        padding: 2.5rem;
+      }
+
+      .form-wrapper {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid #e5e7eb;
+        box-shadow: inset 0 0 0 1px #f1f5f9;
+      }
+
+      iframe {
+        width: 100%;
+        height: 1500px;
+        border: none;
+        background: white;
+      }
+
+      @media (max-width: 768px) {
+        iframe {
+          height: 1650px;
+        }
+      }
+    </style>
+  </body>
+</html>
