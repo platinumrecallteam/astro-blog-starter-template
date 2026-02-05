@@ -7,3 +7,4 @@ export const SITE_DESCRIPTION = "We’re a mobile recall service built to make O
 For fleets, dealers, and organizations, we increase recall completion rates, reduce liability, and protect brand trust—without adding operational burden. We handle the scheduling, logistics, and paperwork; you get safer vehicles, happier customers, and measurable results.
 
 Simply put: we remove every barrier between an open recall and a completed repair.";
+
