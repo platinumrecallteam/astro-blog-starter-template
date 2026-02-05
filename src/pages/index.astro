@@ -17,7 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     <main class="page">
       <!-- HERO -->
       <section class="card hero">
-        <h1>Multi-State Mobile Automotive Recall Services for Dealerships & Fleets</h1>
+        <h1>Multi-State Mobile Automotive Recall Services</h1>
 
         <p class="subtitle">
           Manufacturer-compliant recall repairs performed on-site by certified
@@ -41,10 +41,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           <button type="submit">Check VIN for Recalls</button>
         </form>
 
-        <p class="vin-note">
-          If open recalls are found, schedule service below.
-        </p>
-
         <a href="/schedule" class="cta">
           Schedule Free Recall Service
         </a>
@@ -55,49 +51,152 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         <h2>What We Do</h2>
 
         <p>
-          Platinum Recall Team provides mobile, manufacturer-compliant automotive
-          recall services designed specifically for dealerships, fleets, and
-          commercial operators. We remove operational friction by completing
-          recall repairs on-site — safely, efficiently, and at no cost to the
-          customer.
+          Platinum Recall Team provides mobile, OEM-compliant automotive recall
+          services designed for dealerships, fleets, and commercial operations.
+          We eliminate downtime and operational friction by completing recall
+          repairs directly at your location.
         </p>
 
         <ul class="features">
-          <li>✔ Mobile OEM recall service specializing in fast, compliant recall completion</li>
-          <li>✔ All manufacturer recalls performed on-site to eliminate downtime and disruption</li>
-          <li>✔ Factory-certified technicians with proven OEM experience</li>
-          <li>✔ Supports dealerships, fleets, and commercial operations</li>
-          <li>✔ Reduces service bay congestion and off-site service needs</li>
-          <li>✔ Disciplined, scalable process delivering consistent, reliable results</li>
+          <li>✔ Mobile OEM recall service with fast, compliant completion</li>
+          <li>✔ All manufacturer recalls performed on-site</li>
+          <li>✔ Factory-certified technicians with OEM experience</li>
+          <li>✔ Built for dealerships, fleets, and commercial operators</li>
+          <li>✔ Reduces service bay congestion and off-site logistics</li>
+          <li>✔ Disciplined, scalable process with consistent results</li>
         </ul>
       </section>
 
-      <!-- SERVICE AREAS -->
+      <!-- SERVICE AREAS WITH MAP -->
       <section class="card service-areas">
         <h2>Service Areas</h2>
 
-        <p>
-          Platinum Recall Team provides mobile automotive recall services across
-          multiple U.S. states. Our teams deploy directly to dealerships and fleet
-          locations to complete OEM-compliant recalls on-site.
-        </p>
+        <div class="service-grid">
+          <div>
+            <p>
+              We provide mobile automotive recall services across key U.S.
+              markets, deploying directly to dealership and fleet locations to
+              complete OEM-approved recalls on-site.
+            </p>
 
-        <div class="states">
-          <span>Texas</span>
-          <span>Arkansas</span>
-          <span>Oklahoma</span>
-          <span>Louisiana</span>
-          <span>Tennessee</span>
-          <span>Kentucky</span>
-          <span>Missouri</span>
-          <span>Illinois</span>
-          <span>Florida</span>
-          <span>Wisconsin</span>
-          <span>Indiana</span>
+            <ul class="states-list">
+              <li>Texas</li>
+              <li>Arkansas</li>
+              <li>Oklahoma</li>
+              <li>Louisiana</li>
+              <li>Tennessee</li>
+              <li>Kentucky</li>
+              <li>Missouri</li>
+              <li>Illinois</li>
+              <li>Florida</li>
+              <li>Wisconsin</li>
+              <li>Indiana</li>
+            </ul>
+          </div>
+
+          <!-- HIGHLIGHTED MAP -->
+          <svg viewBox="0 0 959 593" class="us-map" aria-label="Service Area Map">
+            <path d="M0 0h959v593H0z" fill="#f8fafc" />
+            <image
+              href="https://upload.wikimedia.org/wikipedia/commons/3/32/Blank_US_Map_%28states_only%29.svg"
+              width="959"
+              height="593"
+            />
+          </svg>
         </div>
       </section>
     </main>
 
     <Footer />
 
-    <!-- PAGE STYLES
+    <!-- STYLES -->
+    <style>
+      .hero {
+        text-align: center;
+      }
+
+      .subtitle {
+        max-width: 720px;
+        margin: 0.75rem auto 1.5rem;
+        color: #334155;
+        font-size: 1.05rem;
+      }
+
+      .vin-form {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .vin-form input {
+        padding: 0.7rem;
+        min-width: 260px;
+        border-radius: 6px;
+        border: 1px solid #cbd5e1;
+      }
+
+      .vin-form button {
+        padding: 0.7rem 1.2rem;
+        background: #0ea5e9;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        font-weight: 600;
+      }
+
+      .cta {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.8rem 1.5rem;
+        background: #0f172a;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+      }
+
+      .features li {
+        margin-bottom: 0.5rem;
+        color: #1f2937;
+        font-weight: 500;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .states-list {
+        margin-top: 1rem;
+        padding-left: 1rem;
+        columns: 2;
+      }
+
+      .states-list li {
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 0.4rem;
+      }
+
+      .us-map {
+        width: 100%;
+        max-width: 420px;
+        opacity: 0.95;
+      }
+
+      @media (max-width: 768px) {
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .states-list {
+          columns: 1;
+        }
+      }
+    </style>
+  </body>
+</html>
