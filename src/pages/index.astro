@@ -14,7 +14,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<h1>Multi-State Mobile Automotive Recall Services for Dealerships & Fleets</h1>
-			<a
+			<form
+  action="https://www.nhtsa.gov/recalls"
+  method="get"
+  target="_blank"
+  class="vin-form"
+>
+  <input
+    type="text"
+    name="vin"
+    placeholder="Enter VIN (17 characters)"
+    maxlength="17"
+    required
+  />
+  <button type="submit">Check VIN for Recalls</button>
+</form>
+
+<a
   href="/schedule"
   style="
     display:inline-block;
